@@ -29,7 +29,9 @@ export class NavBlankComponent implements OnInit {
   cartCount: number = 0;
   wishListCount: number = 0;
 
+
   @ViewChild('navbar') navElement!: ElementRef;
+
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
@@ -65,5 +67,13 @@ export class NavBlankComponent implements OnInit {
   signOut(): void {
     localStorage.removeItem('etoken');
     this._Router.navigate(['/login']);
+  }
+
+  @ViewChild('closeNabar') closeNav!: ElementRef;
+
+  closeNavBar() {
+    if (this.closeNav.nativeElement.classList.contains('show')) {
+      this.closeNav.nativeElement.classList.remove('show');
+    }
   }
 }
