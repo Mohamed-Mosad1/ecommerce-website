@@ -47,7 +47,7 @@ export class CartService {
 
   checkOut(id: string|null, orderInfo: object): Observable<any> {
     return this._HttpClient.post(
-      this.baseUrl + `orders/checkout-session/${id}?url=https://github.com/Mohamed-Mosad1/ecommerce-website.git`,
+      this.baseUrl + `orders/checkout-session/${id}?url=https://mohamed-mosad1.github.io/ecommerce-website`,
       {
         shippingAddress: orderInfo,
       }
