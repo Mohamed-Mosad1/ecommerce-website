@@ -33,12 +33,12 @@ $second-transition: 0.3s;
 }
 i {
   cursor: pointer;
-  &:hover:not(.fa-cart-shopping, .fa-arrow-up, .fa-star, .fa-heart, .fa-trash) {
+  &:hover:not(.fa-cart-shopping, .fa-arrow-up, .fa-star, .fa-heart, .fa-trash, .fa-user) {
     color: $main-color;
   }
 }
 
-.nav-link {
+.nav-link:not(.dropdown) {
   transition: $second-transition;
   &:hover, &:focus {
     background-color: $main-color;

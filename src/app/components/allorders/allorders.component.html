@@ -4,7 +4,7 @@
   <div class="row border rounded m-2 p-2" *ngFor="let order of ordersDetails | slice: 0:3 ; let i = index">
     <h3 class="h2 badge bg-main">Order : {{i + 1}}</h3>
 
-    <div class="px-3 d-flex align-items-center mt-3" *ngFor="let item of ordersDetails[i].cartItems; let j = index">
+    <div class="px-3 d-flex align-items-center mt-3 phone-response" *ngFor="let item of ordersDetails[i].cartItems; let j = index">
       <div class="col-sm-4">
         <img class="w-100 pe-3" [src]="ordersDetails[i].cartItems[j].product.imageCover" alt="">
       </div>

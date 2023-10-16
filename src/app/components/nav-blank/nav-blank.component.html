@@ -21,11 +21,19 @@
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active-link" routerLink="/brands">Brands</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active-link" routerLink="/allorders">All Orders</a>
-        </li>
       </ul>
-      <ul class="navbar-nav ms-auto align-items-center">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item dropdown text-center">
+          <a class="nav-link dropdown-toggle p-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user fa-xl"></i>
+          </a>
+          <ul class="dropdown-menu p-1 text-center max-w">
+            <li><a class="nav-link" routerLinkActive="active-link" routerLink="/update-password">Update Password</a></li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active-link" routerLink="/allorders">My Orders</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item pe-2">
           <a class="nav-link bg-transparent text-black-50 position-relative" routerLink="/wishlist">
             <i class="fa-solid fa-heart fa-2x"></i>
@@ -44,7 +52,7 @@
           <i class="fab fa-whatsapp"></i>
           <i class="fab fa-linkedin"></i>
         </li>
-        <li class="nav-item" (click)="signOut()">
+        <li class="nav-item py-2" (click)="signOut()">
           <span class="btn btn-outline-danger" role="button">Sign Out</span>
         </li>
       </ul>

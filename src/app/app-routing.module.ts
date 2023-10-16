@@ -18,6 +18,7 @@ const routes: Routes = [
     { path: 'payment/:id', loadComponent:()=>import('./components/payment/payment.component').then((m)=>m.PaymentComponent), title:"Payment" },
     { path: 'wishlist', loadComponent:()=>import('./components/wishlist/wishlist.component').then((m)=>m.WishlistComponent), title:"Wish List" },
     { path: 'allorders', loadComponent:()=>import('./components/allorders/allorders.component').then((m)=>m.AllordersComponent), title:"All Orders" },
+    { path: 'update-password', loadComponent:()=>import('./components/update-password/update-password.component').then((m)=>m.UpdatePasswordComponent), title:"Update Password" },
 
   ]},
   // auth layout
@@ -26,6 +27,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'login', pathMatch: 'full'},
     { path: 'login', loadComponent:()=>import('./components/login/login.component').then((m)=>m.LoginComponent), title:"Login" },
     { path: 'register', loadComponent:()=>import('./components/register/register.component').then((m)=>m.RegisterComponent), title:"Register" },
+    { path: 'forget', loadComponent:()=>import('./components/forget-password/forget-password.component').then((m)=>m.ForgetPasswordComponent), title:"Forget Password" },
   ]},
   // not found
   {path: '**',loadComponent:()=>import('./components/not-found-page/not-found-page.component').then((m)=>m.NotFoundPageComponent) , title:"Page Not Found"}

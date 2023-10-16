@@ -1,6 +1,6 @@
 <section class="w-75 mx-auto rounded shadow p-4 bg-main-light marginY" *ngIf="cartData;else msg">
-  <div class="d-flex justify-content-between hstack">
-    <h1 class="fw-bold text-main">Shop Cart</h1>
+  <div class="d-flex justify-content-between align-items-center my-2">
+    <h1 class="fw-bold text-main">Your Cart</h1>
     <button class="btn btn-outline-danger" (click)="clearCartData()">Clear Cart</button>
   </div>
   <p class="text-main">Total Price: {{cartData.totalCartPrice | currency: ' EGP '}}</p>
@@ -9,7 +9,7 @@
       <img class="w-100" [src]="item.product.imageCover" [alt]="item.product.title">
     </div>
     <div class="col-md-9 hstack justify-content-between">
-      <div>
+      <div class="content">
         <h3 class="h5">{{item.product.title}}</h3>
         <p class="text-main">{{item.price | currency: 'EGP '}}</p>
         <button #rmBtn (click)="removeItem(item.product._id, rmBtn)" class="btn p-0 m-0"><i class="fas fa-trash rmBtn">
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <button class="main-btn" [routerLink]="['/payment', cartData._id]">Online Payment <img
+  <button class="main-btn mt-3" [routerLink]="['/payment', cartData._id]">Online Payment <img
       src="./assets/images/visa-1.svg" alt=""></button>
 </section>
 

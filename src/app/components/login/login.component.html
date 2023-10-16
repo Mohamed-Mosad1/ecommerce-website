@@ -19,12 +19,15 @@
           *ngIf="(loginForm.get('password')?.touched || loginForm.get('password')?.value.length > 0) && loginForm.get('password')?.errors"
           class="alert alert-danger">
           <p *ngIf="loginForm.get('password')?.getError('required')">Password Required</p>
-          <p *ngIf="loginForm.get('password')?.getError('pattern')">invalid Pattern</p>
+          <p *ngIf="loginForm.get('password')?.getError('pattern')">must be at least 6 characters</p>
         </div>
       </div>
-      <button [disabled]="loginForm.invalid" class="btn btn-success mt-3" type="submit"><span *ngIf="isloading"><i
-            class="fa-solid fa-spinner fa-spin me-2"></i></span>Login</button>
-      <p *ngIf="errMsg" class="alert alert-danger">{{errMsg}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <button [disabled]="loginForm.invalid" class="btn btn-success mt-3" type="submit"><span *ngIf="isloading"><i
+          class="fa-solid fa-spinner fa-spin me-2"></i></span>Login</button>
+          <p *ngIf="errMsg" class="alert alert-danger">{{errMsg}}</p>
+          <a routerLink="/forget" class="link-danger">Forget Password</a>
+      </div>
     </form>
   </div>
 </section>

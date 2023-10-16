@@ -71,8 +71,8 @@ export class RegisterComponent {
         next: (res) => {
           if (res.message === 'success') {
             this._Router.navigate(['/login']);
-            this.isloading = false;
           }
+          this.isloading = false;
         },
         error: (err) => {
           this.errMsg = err.error.message;
