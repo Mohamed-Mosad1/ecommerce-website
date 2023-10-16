@@ -1,0 +1,23 @@
+.paddingY {
+  padding: 5rem 0;
+}
+
+.product {
+  overflow: hidden;
+  .main-btn {
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 1s;
+  }
+  &:hover {
+    .main-btn {
+    transform: translateY(0);
+    opacity: 1;
+    }
+  }
+  .fa-heart:hover {
+    color: red;
+  }
+
+}
+
